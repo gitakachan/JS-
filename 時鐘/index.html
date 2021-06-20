@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>time</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="clock">
+      <div class="timer">current time</div>
+      <button class="btn">夜間模式</button>
+    </div>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./jquery.color-2.1.2.js"></script>
+    <script src="app.js"></script>
+    <script>
+      // 使用jQuery-color plugin 動態改變顏色: https://github.com/jquery/jquery-color
+      $(function () {
+        //获取按钮，改变盒子的背景色；
+        let i = 0;
+        $("button").on("click", function () {
+          i++;
+          if (i % 2 == 1) {
+            $(".clock").animate({ "background-color": "#333" }, 2000);
+            $(".timer").animate({ color: "#eee" }, 2000);
+            $(".timer").animate({ "background-color": "#444" }, 1000);
+
+            $(".btn").animate({ color: "#eee" }, 2000);
+            $(".btn").animate({ "background-color": "#666" }, 1500);
+            setTimeout(function () {
+              $(".btn").html("日間模式");
+            }, 2000);
+          } else {
+            $(".clock").animate({ "background-color": "#ccc" }, 2000);
+            $(".timer").animate({ "background-color": "#fff" }, 1000);
+            $(".timer").animate({ color: "#000" }, 2000);
+
+            $(".btn").animate({ color: "#000" }, 2000);
+            $(".btn").animate({ "background-color": "#fff" }, 1500);
+            setTimeout(function () {
+              $(".btn").html("夜間模式");
+            }, 2000);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
