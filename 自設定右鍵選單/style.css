@@ -1,0 +1,21 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  background-color: #da0;
+  padding: 10px;
+}
+
+.goToPage {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  padding: 5px;
+}
