@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.origin img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.origin {
+  margin: 40px;
+  position: relative;
+  background-color: rgb(201, 39, 39);
+  width: 800px;
+  height: 600px;
+}
+
+.mask {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  /* display: none; */
+}
